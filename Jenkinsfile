@@ -2,10 +2,14 @@ pipeline {
     agent any
 
     stages {
+        stage('Compile') {
+            steps {
+                sh 'go build'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'BUILD EXECUTION STARTED'
-                sh 'go version'
                 sh 'docker build . -t egamorim/api-test'
             }
         }
