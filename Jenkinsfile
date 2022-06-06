@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                sh 'go build'
+                sh 'go build cmd/api/.'
             }
         }
         stage('Build') {
