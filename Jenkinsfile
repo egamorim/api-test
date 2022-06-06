@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                sh 'make build'
+                echo 'BUILD EXECUTION STARTED'
+                sh 'go version'
+                sh 'go get ./...'
+                sh 'docker build . -t egamorim/api-test'
             }
         }
         stage('Test') {
