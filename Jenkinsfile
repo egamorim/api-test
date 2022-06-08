@@ -8,7 +8,6 @@ pipeline {
         GO114MODULE = 'on'
         CGO_ENABLED = 0 
         GOPATH = "${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_ID}"
-        DOCKER_CERT_PATH = credentials('id-for-a-docker-cred')
     }
 
     stages {
